@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Consolas';
+    src: url('../font/Consolas.woff2') format('woff2'),
+        url('../font/Consolas.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Consolas';
+    src: url('../font/Consolas-Bold.woff2') format('woff2'),
+        url('../font/Consolas-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #001A2F !important;
+    color: #FFFFFF;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+h1, h2, span, p, a {
+    font-size: 17px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+p {
+    color: #F1F1F1;
+}
+
+.topico {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.subitem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.subitem.apresentacao {
+    gap: 20px;
+}
+
+.divisoria {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    hr {
+        width: 100%;
+        color: #F1F1F1;
+    }
+}
+
+.meu-nome {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contato {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.meu-nome, .link {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.icone-contato {
+    width: 25px;
+}
+
+.habilidades {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.habilidade {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.habilidade span {
+    width: 100%;
+    text-align: center;
+}
+
+.icone-habilidade {
+    background-color: #002D51;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-habilidade img {
+    width: 50px;
+}
+
+.sql, .linux {
+    width: 45px !important;
+}
+
+.certificacao img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 40px 20px;
+        gap: 40px;
+    }
+    .meu-nome {
+        font-size: 32px;
+    }
+    .item {
+        flex-direction: column;
+    }
+    .item.introducao {
+        gap: 40px;
+    }
+    .item.habilidades-tecnicas {
+        gap: 20px;
+    }
+    .item.certificacao {
+        gap: 10px;
+    }
+    .subitem {
+        width: 100%;
+    }
+    .habilidades {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .habilidade {
+        width: calc(50% - 10px);
+    }
+    .icone-habilidade {
+        width: 100%;
+    }
+    .google-cybersecurity .imagem {
+        order: 1;
+    }
+    .cs50-sql .imagem {
+        order: 1;
+    }
+}
